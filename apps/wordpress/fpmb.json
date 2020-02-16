@@ -2,9 +2,18 @@
   "title": "WordPress",
   "version": "latest",
   "nginx": {
+    "executor": {
+      "type": "docker",
+      "image": "nginx:alpine"
+    },
     "conf": ["nginx.conf.j2", "fastcgi_params"],
+    "depends": ["fpm"]
   },
-  "php": {
+  "fpm": {
+    "executor": {
+      "type": "cli",
+      "executable": "php-fpm"
+    },
     "conf": ["php-fpm.conf"]
   },
   "app": {

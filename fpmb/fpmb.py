@@ -18,4 +18,4 @@ if __name__ == '__main__':
     if sys.version < '3':
         print("Only Python 3 is supported - you are using version %d.%d" % sys.version_info[:2])
     else:
-        sys.exit(main());
+        sys.exit(main())
