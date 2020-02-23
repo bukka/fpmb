@@ -17,6 +17,11 @@
     "conf": ["php-fpm.conf"]
   },
   "app": {
+    "source": {
+      "type": "git",
+      "url": "https://github.com/WordPress/WordPress.git",
+      "branch": "5.3-branch"
+    },
     "conf": [
       {"from": "wp-config.php.j2", "to": "wp-config.php"}
     ]
